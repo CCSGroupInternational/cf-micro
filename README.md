@@ -20,7 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```sh
 # Add the example hostnames to your /etc/hosts file:
-echo 'api.example.com 127.0.0.80' |sudo tee -a /etc/hosts
+echo '127.0.0.80 api.example.com' |sudo tee -a /etc/hosts
 
 # Clone the repository
 git clone https://github.com/CCSGroupInternational/micro-cf
@@ -54,5 +54,5 @@ rm -rf ~/.cf
 source setup/env.sh
 
 # Get local api info
-cf api https://$API_ENDPOINT
+cf api https://$API_ENDPOINT --skip-ssl-validation
 ```
