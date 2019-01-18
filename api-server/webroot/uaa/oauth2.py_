@@ -1,0 +1,35 @@
+from wsgiref.simple_server import make_server, WSGIRequestHandler
+
+from oauth2 import Provider
+from oauth2.store.memory import ClientStore, TokenStore
+from oauth2.tokengenerator import Uuid4
+from oauth2.web.wsgi import Application
+from oauth2.grant import ClientCredentialsGrant
+
+class OAuthRequestHandler(WSGIRequestHandler):
+    """
+    Request handler that enables formatting of the log messages on the console.
+    This handler is used by the python-oauth2 application.
+    """
+    def address_string(self):
+        return "python-oauth2"
+
+client_store = ClientStore()
+client_store.add_client(client_id="abc", client_secret="xyz",
+                        redirect_uris=[])
+
+token_store = TokenStore()
+token_gen = Uuid4()
+token_gen.expires_in['client_credentials'] = 3600
+
+auth_controller = Provider(
+    access_token_store=token_store,
+    auth_code_store=token_store,
+    client_store=client_store,
+    token_generator=token_gen)
+auth_controller.add_grant(ClientCredentialsGrant())
+
+application = Application(provider=auth_controller)
+
+
+
