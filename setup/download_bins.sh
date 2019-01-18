@@ -1,17 +1,14 @@
-#!/bin/sh
+#!/bin/sh -eu
+
 CF_CLI_VERSION=6.42.0
 
-mkdir -p ~/micro-cf/bin
-rm -f ~/micro-cf/bin/*.tgz
+mkdir -p "${MCF_BIN_DIR}"
 
 echo Downloading binaries...
-wget "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=$CF_CLI_VERSION" -O ~/micro-cf/bin/cf.tgz
-tar -C ~/micro-cf/bin/ -xvf ~/micro-cf/bin/cf.tgz cf
-rm -f ~/micro-cf/bin/bin/*.tgz
-chmod 755 ~/micro-cf/bin/*
-export PATH=$PATH:~/micro-cf/bin
-echo
-echo Please make sure you set the path on your ~/.bashrc file:
-echo    export PATH=\$PATH:~/micro-cf/bin
-echo
+wget "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=$CF_CLI_VERSION" -O "${MCF_BIN_DIR}/cf.tgz"
+tar -C "${MCF_BIN_DIR}" -xf "${MCF_BIN_DIR}"/cf.tgz cf
+rm -f "${MCF_BIN_DIR}/*.tgz"
+chmod 755 "${MCF_BIN_DIR}"/*
+
+
 cf -v
