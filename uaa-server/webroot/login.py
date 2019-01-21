@@ -4,7 +4,7 @@ import json
 class Controller(object):
 
     @controller.publish
-    def default(self):
+    def default(self, *args):
         PROMPT_JSON = {
             "prompts":  {
                 "username":["text","Email"],

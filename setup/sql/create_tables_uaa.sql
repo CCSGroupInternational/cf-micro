@@ -1,0 +1,5 @@
+
+CREATE TABLE IF NOT EXISTS USERS (
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL
+);

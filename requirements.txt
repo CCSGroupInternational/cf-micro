@@ -1,1 +1,3 @@
-quickweb
+https://github.com/Adwaita/QuickWeb/archive/master.zip
+https://github.com/CCSGroupInternational/pyrqlite/archive/master.zip
+passlib
