@@ -1,5 +1,5 @@
 # User Account and Authentication
-The UAA services provide authentication, authorization and account management services for the cf-micro platform.
+The UAA component provides authentication, authorization and account management services for the cf-micro platform.
 
 ## Use cases
 An auditor, developer or manager wants to perform an activity on a micro-cf instance using the CF command line interface.
