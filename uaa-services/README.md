@@ -15,14 +15,14 @@ An auditor, developer or manager wants to perform an activity on a micro-cf inst
     ```json
     {
         "prompts": {
-            "username": ["text", "Email"], 
+            "username": ["text", "Email"],
             "password": ["password", "Password"]
             }
     }
     ```
     d) The CF CLI prompts the user fot the required fields and then submits a token grant request: `HTTP(S) "PUT /oauth/token"`
 
-    e) The UAA `/oauth/token` service validates the submitted credentials, if valid it returns a signed JSON Web Token, this JSON includes the list of privileges authorizations/scopes that are granted to the user, example:
+    e) The UAA `/oauth/token` service validates the submitted credentials, if valid it returns a signed [JSON Web Token], this JSON includes the list of privileges authorizations/scopes that are granted to the user, example:
     ```json
     {   "jti":"dada01e968804f6fbd073274d431bdee",
         "sub":"admin",
@@ -58,8 +58,8 @@ An auditor, developer or manager wants to perform an activity on a micro-cf inst
     f) Subsequent `cf commands` result in HTTP(S) requests submitted to the API endpoint, such requests must include a valid token header. The command is accepted if the scope and authorities are sufficient for the operation execution.
 
 
+[JSON Web Token]: https://jwt.io/
+
 References:
-
 - https://docs.cloudfoundry.org/uaa/uaa-overview.html
-
 - https://github.com/cloudfoundry/uaa
