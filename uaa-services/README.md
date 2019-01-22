@@ -2,7 +2,7 @@
 The UAA services provide authentication, authorization and account management services for the cf-micro platform.
 
 ## Use cases
-An auditor, developer or manager wants to perform an activity on a micro-cf instance using the cF Command line client
+An auditor, developer or manager wants to perform an activity on a micro-cf instance using the CF command line interface.
 
 ### Command Line Login (Integrated Identity Repository)
 1. Authentication
