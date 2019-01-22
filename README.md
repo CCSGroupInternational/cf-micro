@@ -27,7 +27,7 @@ _EOF_
 
 # Clone the repository
 git clone https://github.com/CCSGroupInternational/cf-micro
-cd micro-cf
+cd cf-micro
 
 # Setup micro-cf environment variables setup
 source setup/env.sh     
@@ -53,7 +53,8 @@ nohup rqlited \
 # Start the haproxy
 haproxy -f haproxy/
 
-# If you are running for the first time, bootstrap the UAA database, using:
+# If you are running for the first time, bootstrap the UAA database
+# NOTE: Take node of the admin password for later use !!!
 setup/uaa_db_bootstrap.py
 
 # Start the UAA server
@@ -72,4 +73,7 @@ source setup/env.sh
 
 # Get local api info
 cf api https://$API_ENDPOINT --skip-ssl-validation
+
+# Login using the bootstrap admin credentials
+cf login -u admin --skip-ssl-validation
 ```
