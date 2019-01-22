@@ -29,7 +29,7 @@ _EOF_
 git clone https://github.com/CCSGroupInternational/cf-micro
 cd cf-micro
 
-# Setup micro-cf environment variables setup
+# Setup cf-micro environment variables setup
 source setup/env.sh     
 
 # Download binaries for the Golang based components
@@ -57,8 +57,8 @@ haproxy -f haproxy/
 # NOTE: Take node of the admin password for later use !!!
 setup/uaa_db_bootstrap.py
 
-# Start the UAA server
-PORT=${UAA_BACKEND_PORT} quickweb run uaa-server -l ${UAA_BACKEND_FIRST_IP} 
+# Start the UAA service
+PORT=${UAA_BACKEND_PORT} quickweb run uaa-services -l ${UAA_BACKEND_FIRST_IP} 
 ```
 
 ## Testing

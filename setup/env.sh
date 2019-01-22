@@ -16,9 +16,9 @@ export UAA_ENDPOINT=uaa.example.com:8443
 export UAA_BACKEND_FIRST_IP=127.0.20.1
 export UAA_BACKEND_PORT=8000
 
-# micro-cf global config
-export CFM_BIN_DIR=$HOME/micro-cf/bin
-export CFM_ETC_DIR=$HOME/micro-cf/etc
-export CFM_SSL_CONF_DIR=$HOME/micro-cf/etc/ssl
-export CFM_API_INFO_FILE=$HOME/micro-cf/etc/api-info.http
+# cf-micro global config
+export CFM_BIN_DIR=$HOME/cf-micro/bin
+export CFM_ETC_DIR=$HOME/cf-micro/etc
+export CFM_SSL_CONF_DIR=$HOME/cf-micro/etc/ssl
+export CFM_API_INFO_FILE=$HOME/cf-micro/etc/api-info.http
 export PATH=$PATH:$CFM_BIN_DIR
