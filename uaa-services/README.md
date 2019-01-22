@@ -20,7 +20,7 @@ An auditor, developer or manager wants to perform an activity on a micro-cf inst
             }
     }
     ```
-    d) The CF CLI requests or retrieves the fields from the command line and submits a token grant request: `HTTP(S) "PUT /oauth/token"`
+    d) The CF CLI prompts the user fot the required fields and then submits a token grant request: `HTTP(S) "PUT /oauth/token"`
 
     e) The UAA `/oauth/token` service validates the submitted credentials, if valid it returns a signed JSON Web Token, this JSON includes the list of privileges authorizations/scopes that are granted to the user, example:
     ```json
