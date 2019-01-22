@@ -1,7 +1,7 @@
 #!/bin/sh -eu
 
 
-cat > ${MCF_API_INFO_FILE} << _EOF_ 
+cat > ${CFM_API_INFO_FILE} << _EOF_ 
 HTTP/1.0 200 Found
 Cache-Control: no-cache
 Connection: close

@@ -1,6 +1,6 @@
-# A Cloud Foundry Compatible Micro Framework
+# A Cloud Foundry Compatible Micro Platform
 
-A [Cloud Foundry] compatible framework built from low footpring components with the purpose of being used on systems with lower CPU/RAM requirements.
+A [Cloud Foundry] compatible platform using low footprint components for the purpose of being used on systems with lower CPU/RAM requirements.
 
 [Cloud Foundry]: https://www.cloudfoundry.org/
 
@@ -26,7 +26,7 @@ cat << _EOF_ |sudo tee -a /etc/hosts
 _EOF_
 
 # Clone the repository
-git clone https://github.com/CCSGroupInternational/micro-cf
+git clone https://github.com/CCSGroupInternational/cf-micro
 cd micro-cf
 
 # Setup micro-cf environment variables setup
