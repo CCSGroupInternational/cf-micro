@@ -10,7 +10,7 @@ Content-Type: text/json
 {
   "name": "vcap",
   "build": "2222",
-  "support": "https://github.com/CCSGroupInternational/micro-cf/issues",
+  "support": "https://github.com/CCSGroupInternational/cf-micro/issues",
   "version": 2,
   "description": "Micro Framework for the Cloud Foundry Platform",
   "authorization_endpoint": "https://${UAA_ENDPOINT}",

@@ -26,10 +26,10 @@ cat << _EOF_ |sudo tee -a /etc/hosts
 _EOF_
 
 # Clone the repository
-git clone https://github.com/CCSGroupInternational/micro-cf
-cd micro-cf
+git clone https://github.com/CCSGroupInternational/cf-micro
+cd cf-micro
 
-# Setup micro-cf environment variables setup
+# Setup cf-micro environment variables setup
 source setup/env.sh     
 
 # Download binaries for the Golang based components
