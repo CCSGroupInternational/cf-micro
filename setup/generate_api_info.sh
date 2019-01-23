@@ -1,7 +1,7 @@
 #!/bin/sh -eu
 
 
-cat > ${CFM_API_INFO_FILE} << _EOF_ 
+cat > ${MCF_API_INFO_FILE} << _EOF_ 
 HTTP/1.0 200 Found
 Cache-Control: no-cache
 Connection: close
@@ -10,9 +10,9 @@ Content-Type: text/json
 {
   "name": "vcap",
   "build": "2222",
-  "support": "https://github.com/CCSGroupInternational/cf-micro/issues",
+  "support": "https://github.com/CCSGroupInternational/micro-cf/issues",
   "version": 2,
-  "description": "CloudFoundry Compatible Micro Framework ",
+  "description": "Micro Framework for the Cloud Foundry Platform",
   "authorization_endpoint": "https://${UAA_ENDPOINT}",
   "token_endpoint": "https://${UAA_ENDPOINT}",
   "min_cli_version": null,
